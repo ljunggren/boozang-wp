@@ -29,8 +29,12 @@ class Boozang_Deactivator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function deactivate() {
 
-	}
+	public static function deactivate() {
+        // Flush rewrite rules 
+        global $wp_rewrite;
+        $wp_rewrite->flush_rules();
+        error_log("De-activating plugin");  
+    }
 
 }

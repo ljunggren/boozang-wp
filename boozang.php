@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Boozang
  * Plugin URI:        https://github.com/ljunggren/boozang-wp
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       The Boozang plugin allows you to automate testing of your WordPress site. Create a free account at http://boozang.com to create your first project. 
  * Version:           1.0.0
  * Author:            Mats
  * Author URI:        http://boozang.com
@@ -72,4 +72,5 @@ function run_boozang() {
 	$plugin->run();
 
 }
+
 run_boozang();

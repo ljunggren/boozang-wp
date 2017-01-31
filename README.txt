@@ -8,44 +8,32 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+The Boozang plugin allows you to automate testing of your WordPress site.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+Boozang is a plugin that turns your browser into a test tool. It allows you to test and report bugs directly in the browser. 
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+The following features are supported: 
 
-A few notes about the sections above:
+1. Record/replay actions: The record function allows you to catch a series of events in the browser and replay them at will
+2. Validation: The validation tool allows you to do validation directly in the browser
+3. Bug reporter: The bug reporter allows you to highlight bugs in the browser and create hyperlinkable reproduce links that replays the bugs for the user.
+4. Data binding: The data binding functionality allows user to bind external data (like json or csv files) into forms. The user can also loop over data.
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
+For a full breakdown of all the features check-out the instruction videos at http://boozang.com/gettingstarted. 
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
-
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+To install the Boozang plugin do the following
 
-e.g.
-
-1. Upload `boozang.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Sign-upp for free at http://boozang.com 
+2. Create your first project "my-wordpress-site"
+3. Note down your personal project API key (do not share this key)
+4. Activate the plugin through the 'Plugins' menu in WordPress
+5. Open Plugin Settings - > Enter the project API key from step 3
+6. Access page 
 
 == Frequently Asked Questions ==
 

@@ -54,6 +54,81 @@ class Boozang_Admin {
 
 	}
 
+	public function add_plugin_admin_menu() {
+
+    /*
+     * Add a settings page for this plugin to the Settings menu.
+     *
+     * NOTE:  Alternative menu locations are available via WordPress administration menu functions.
+     *
+     *        Administration Menus: http://codex.wordpress.org/Administration_Menus
+     *
+     */
+    add_options_page( 'WP Cleanup and Base Options Functions Setup', 'WP Cleanup', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page')
+    );
+}
+
+
+public function add_action_links( $links ) {
+    /*
+    *  Documentation : https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_(plugin_file_name)
+    */
+   $settings_link = array(
+    '<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">' . __('Settings', $this->plugin_name) . '</a>',
+   );
+   return array_merge(  $settings_link, $links );
+
+}
+
+/**
+ * Render the settings page for this plugin.
+ *
+ * @since    1.0.0
+ */
+ 
+public function display_plugin_setup_page() {
+    include_once( 'partials/boozang-admin-display.php' );
+}
+
+ public function options_update() {
+    register_setting($this->plugin_name, $this->plugin_name, array($this, 'validate'));
+   //Grab all options
+   $options = get_option($this->plugin_name);
+
+    // Cleanup
+    $option1 = $options['option1'];
+    $projectkey = $options['projectkey'];
+    error_log("Setting project key: ".$projectkey);
+    add_action('init', 'boozang_rewrite_rules');
+
+    global $wp_rewrite;
+    $plugin_url = plugins_url( 'bz.php', __FILE__ );
+    $plugin_url = substr( $plugin_url, strlen( home_url() ) + 1 )."?projectId=".$projectkey;
+    $wp_rewrite->add_external_rule( 'bz$', $plugin_url );
+    $wp_rewrite->flush_rules();  
+}
+
+public function update_boozang_rewrite_rules($projectkey) { 
+    //add_rewrite_rule( 'boozang$', 'wp-content/plugins/boozang/bz.php', 'top' );
+    global $wp_rewrite;
+    $plugin_url = plugins_url( 'bz.php', __FILE__ );
+    $plugin_url = substr( $plugin_url, strlen( home_url() ) + 1 )."?projectId=".$projectkey;
+    $wp_rewrite->add_external_rule( 'bz$', $plugin_url );
+    //add_rewrite_rule( 'boozang$', 'wp-content/plugins/boozang/bz.php', 'top' );
+}
+
+public function validate($input) {
+    // All checkboxes inputs        
+    $valid = array();
+
+    //Cleanup
+    $valid['option1'] = (isset($input['option1']) && !empty($input['option1'])) ? 1 : 0;
+    $valid['projectkey'] = ctype_xdigit($input['projectkey']) ? $input['projectkey'] : "";
+    
+    return $valid;
+ }
+
+
 	/**
 	 * Register the stylesheets for the admin area.
 	 *
