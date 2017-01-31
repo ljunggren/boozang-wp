@@ -66,7 +66,7 @@ No screenshots in this release
 
 ## Changelog ##
 
-# 0.1 #
+### 0.1 ###
 * Added first plugin version. Supports adding Boozang API key on the Plugin Settings page.  
 
 ## Upgrade Notice ##
