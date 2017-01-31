@@ -18,7 +18,7 @@
 <div class="wrap">
 
 
-    <h2 class="nav-tab-wrapper">Clean up</h2>
+    <h2 class="nav-tab-wrapper">Boozang Plugin Setting Page</h2>
 
     <form method="post" name="cleanup_options" action="options.php">
 
