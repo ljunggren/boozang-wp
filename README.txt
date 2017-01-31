@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: (this should be a list of wordpress.org userid's)
-Donate link: http://boozang.com
+Donate link: https://boozang.com
 Tags: comments, spam
 Requires at least: 3.0.1
 Tested up to: 3.4
@@ -28,75 +28,41 @@ For a full breakdown of all the features check-out the instruction videos at htt
 
 To install the Boozang plugin do the following
 
-1. Sign-upp for free at http://boozang.com 
+1. Sign-upp for free at https://boozang.com 
 2. Create your first project "my-wordpress-site"
 3. Note down your personal project API key (do not share this key)
 4. Activate the plugin through the 'Plugins' menu in WordPress
 5. Open Plugin Settings - > Enter the project API key from step 3
-6. Access page 
+6. Access page by typing /bz relative to the Wordpress root URL
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+=  Does it cost anything? =
 
-An answer to that question.
+Boozang is currently totally free and will remain this way for the foreseeable future. There exists a premium tier that will unlock more functionality for teams but this is usually not necessary for the normal Wordpress user. The plan is to keep the free tier full-featured and useful, and not to limit the user experience for individual users in any way.
 
-= What about foo bar? =
+= Can I collaborate with other people? =
 
-Answer to foo bar dilemma.
+Boozang is built for collaboration. Simply access your project in management view at https://api.boozang.com, pick the project, click Users > Add User. After typing in the email of the user, an email will be sent to the user where they will be invited to sign-up. After signing-up they will be able to access the project. Note: A maximum of two team members can collaborate in the Free tier.
+
+= How can I do cross-browser testing? =
+
+It’s actually quite easy. Because Boozang is browser-agnostic, you can work creating tests in the browser of your choice. When doing cross-browser testing simple copy the URL into the browser you want to test, login and you can access and replay all the tests previously created.
+
+= Which browsers are supported? =
+
+It’s been tested working on all recent versions of Chrome, Firefox, Safari, and IE. The only known browsers which is not working is Opera and IE 8.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+No screenshots in this release
 
 == Changelog ==
 
-= 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+= 0.1 =
+* Added first plugin version. Supports adding Boozang API key on the Plugin Settings page.  
 
 == Upgrade Notice ==
 
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
+= 0.1 =
+This is the first BEta of the plugin. It has not been verified or approved. 
