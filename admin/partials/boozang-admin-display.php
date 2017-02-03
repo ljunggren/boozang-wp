@@ -18,7 +18,7 @@
 <div class="wrap">
 
 
-    <h2 class="nav-tab-wrapper">Boozang Plugin Setting Page</h2>
+    <h2 class="nav-tab-wrapper">Boozang Plugin Settings Page</h2>
 
     <form method="post" name="cleanup_options" action="options.php">
 
@@ -54,11 +54,9 @@
     </fieldset>
 
 
-    <span>In order to launch the tool, simply type /bz in the Wordpress root, or click <a target="_blank" href="<?php echo site_url(); ?>/bz">here<a></span>
-
     <?php submit_button('Save all changes', 'primary','submit', TRUE); ?>
 
-    
+    <span>In order to launch the tool, simply type /bz in the Wordpress root, or click <a target="_blank" href="<?php echo site_url(); ?>/bz">here<a></span>    
 
     </form>
 
