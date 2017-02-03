@@ -37,24 +37,26 @@
     ?>
 
     <!-- remove some meta and generators from the <head> -->
-    <fieldset>
-        <legend class="screen-reader-text">
-            <span><?php _e('Checkbox option for Boozang testing tool', $this->plugin_name);?></span>
-        </legend>
-        <label for="<?php echo $this->plugin_name; ?>-option1">
-            <input type="checkbox" id="<?php echo $this->plugin_name; ?>-option1" name="<?php echo $this->plugin_name; ?>[option1]" value="1" <?php checked($option1, 1); ?> />
-            <span><?php esc_attr_e('Boozang checkbox option', $this->plugin_name); ?></span>
-        </label>
-    </fieldset>
+
 
 
     <fieldset>
-        <p>Boozang project API key. Sign-up for free <a href="http://boozang.com">here</a> and get your project API key.
+        <p>Boozang project API key. Sign-up for free <a href="https://boozang.com">here</a> and get your project API key.
         <input type="text" class="regular-text" id="<?php echo $this->plugin_name; ?>-projectkey" name="<?php echo $this->plugin_name; ?>[projectkey]" value="<?php if(!empty($projectkey)) echo $projectkey; ?>"/>        
     </fieldset>
 
+        <fieldset>
+        <p>In order to facilitate test automation and collaboration, the Boozang plugin will save information in your project account at <a target="_blank" href="https://api.boozang.com">https://api.boozang.com</a>.<br/>
+           Projects can be exported to your local desktop and deleted at any time by accessing your project dashboard.</p>
+        <label for="<?php echo $this->plugin_name; ?>-option1">
+            <input type="checkbox" onchange="document.getElementById('savebutton').disabled = !this.checked;" id="<?php echo $this->plugin_name; ?>-option1" name="<?php echo $this->plugin_name; ?>[option1]" value="0" <?php checked($option1, 1); ?> />
+            <span><?php esc_attr_e('I agree with ', $this->plugin_name); ?><a target="_blank" href="https://boozang.com/toc/">Terms of Service</a><?php esc_attr_e(' for the Boozang testing tool', $this->plugin_name); ?></span>
+        </label>
+    </fieldset>
 
-    <?php submit_button('Save all changes', 'primary','submit', TRUE); ?>
+     <br/>
+     <input type="submit" id="savebutton" name="savebutton" class="button button-primary" value="Save changes" disabled="<?= ($option1 = 0) ?>"/>
+     <br/> <br/>
 
     <span>In order to launch the tool, simply type /bz in the Wordpress root, or click <a target="_blank" href="<?php echo site_url(); ?>/bz">here<a></span>    
 

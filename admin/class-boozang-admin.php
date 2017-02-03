@@ -98,7 +98,7 @@ public function display_plugin_setup_page() {
     // Cleanup
     $option1 = $options['option1'];
     $projectkey = $options['projectkey'];
-    error_log("Setting project key: ".$projectkey);
+    // error_log("Setting project key: ".$projectkey);
     add_action('init', 'boozang_rewrite_rules');
 
     global $wp_rewrite;
