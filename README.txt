@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: https://boozang.com
-Tags: comments, spam
+Tags: boozang, test automation, 
 Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
+Tested up to: 4.7.2
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,14 +21,14 @@ The following features are supported:
 3. Bug reporter: The bug reporter allows you to highlight bugs in the browser and create hyperlinkable reproduce links that replays the bugs for the user.
 4. Data binding: The data binding functionality allows user to bind external data (like json or csv files) into forms. The user can also loop over data.
 
-For a full breakdown of all the features check-out the instruction videos at http://boozang.com/gettingstarted. 
+For a full breakdown of all the features check-out the instruction videos at http://boozang.com/gettingstarted or the GitHub pages at https://ljunggren.github.io/boozang-fo.
 
 
 == Installation ==
 
 To install the Boozang plugin do the following
 
-1. Sign-upp for free at https://boozang.com 
+1. Sign-up for free at https://boozang.com 
 2. Create your first project "my-wordpress-site"
 3. Note down your personal project API key (do not share this key)
 4. Activate the plugin through the 'Plugins' menu in WordPress
@@ -59,10 +59,16 @@ No screenshots in this release
 
 == Changelog ==
 
+= 1.0 =
+* Plugin Approved. Restart numbering at 1.0. 
+
 = 0.1 =
 * Added first plugin version. Supports adding Boozang API key on the Plugin Settings page.  
 
 == Upgrade Notice ==
 
 = 0.1 =
-This is the first BEta of the plugin. It has not been verified or approved. 
+This is the first Beta of the plugin. It has not been verified or approved. 
+
+= 1.0 =
+This plugin was just approved at Wordpress.org. 
