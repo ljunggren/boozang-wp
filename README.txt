@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
+Contributors: boozang
 Donate link: https://boozang.com
 Tags: boozang, test automation, 
 Requires at least: 3.0.1
@@ -34,6 +34,12 @@ To install the Boozang plugin do the following
 4. Activate the plugin through the 'Plugins' menu in WordPress
 5. Open Plugin Settings - > Enter the project API key from step 3
 6. Access page by typing /bz relative to the Wordpress root URL
+
+To de-activate the plugin fully, make sure to access
+
+Settings -> Permalinks
+
+This way the added rewrite rule is guaranteed to be flushed.
 
 == Frequently Asked Questions ==
 
